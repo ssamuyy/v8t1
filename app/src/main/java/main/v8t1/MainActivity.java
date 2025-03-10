@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         euroInput = findViewById(R.id.EuroInput);
-        resultText = findViewById(R.id.TextView);
+        resultText = findViewById(R.id.ResultText);
 
     }
 
@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         resultText.setText(amountUSD);
     }
 
-    public void transformToGBP(View view) {
+    public void transformToGDP(View view) {
         double pounds = Double.parseDouble(euroInput.getText().toString()) * 0.83;
-        String amountGBP = String.format("£%.2f", pounds);
+        String amountGDP = String.format("£%.2f", pounds);
 
-        resultText.setText(amountGBP);
+        resultText.setText(amountGDP);
     }
 }
